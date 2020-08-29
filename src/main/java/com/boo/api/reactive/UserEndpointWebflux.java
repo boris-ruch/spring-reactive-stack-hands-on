@@ -25,6 +25,8 @@ public class UserEndpointWebflux {
     @GetMapping("users")
     public Flux<User> getUsers() {
         log.info("call webflux endpoint");
+        // returns a Flux reading all users from the blocking repository deferred until the flux is subscribed,
+        //  and run it with an elastic scheduler
         return Flux.defer(() -> Flux.fromIterable(blockingUserRepository.findAll()))
                 .subscribeOn(Schedulers.elastic());
     }

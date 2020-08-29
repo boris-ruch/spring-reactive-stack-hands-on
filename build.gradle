@@ -23,6 +23,10 @@ dependencies {
 	compile 'io.reactivex.rxjava3:rxjava:3.0.1'
 	compile group: 'io.projectreactor', name: 'reactor-test', version: '3.3.9.RELEASE'
 
+	compile 'io.springfox:springfox-swagger2:2.9.2'
+	// usually this is only used in test classes
+	compile group: 'org.assertj', name: 'assertj-core', version: '3.17.0'
+	compile 'com.github.javafaker:javafaker:0.15'
 
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
