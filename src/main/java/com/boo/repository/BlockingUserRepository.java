@@ -5,6 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Mono;
 
+import java.util.concurrent.TimeUnit;
+
 @Repository
 @Slf4j
 public class BlockingUserRepository implements BlockingRepository<User> {
@@ -45,6 +47,11 @@ public class BlockingUserRepository implements BlockingRepository<User> {
     @Override
     public Iterable<User> findAll() {
         callCount++;
+//        try {
+//            TimeUnit.MILLISECONDS.sleep(50);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         return reactiveRepository.findAll().toIterable();
     }
 

@@ -18,7 +18,11 @@ To do this Hands-on, you just have to:
    to make unit tests green (you can have a look at the unit tests too if you want)
 
 The solution is available in the `solution` branch to compare, when you have finished, with what you have done.
+Solution
+https://github.com/reactor/lite-rx-api-hands-on/tree/solution
 
 A Kotlin version that takes advantage of [reactor-kotlin-extensions](https://github.com/reactor/reactor-kotlin-extensions) is available [here](https://github.com/eddumelendez/reactor-kotlin-workshop).
  
 More information available on [Reactor website](https://projectreactor.io).
+
+
